@@ -1,0 +1,31 @@
+@CHARSET "UTF-8";
+
+/**
+* Polaroids Module
+* 2011 Benjamin Booth
+* @bkbooth11
+* bkbooth@facebook.com
+*/
+
+.polaroids {
+	text-align: center;
+	/* padding: 5px 0 0; */
+}
+
+.polaroid {
+	/* border: 5px solid #ffffff; */
+}
+
+.round {
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	behavior: url(border-radius.htc);
+}
+
+.shadow {
+	box-shadow: 0 0 5px #888888;
+	-moz-box-shadow: 0 0 5px #888888;
+	-webkit-box-shadow: 0 0 5px #888888;
+	behavior: url(ie-css3.htc);
+}

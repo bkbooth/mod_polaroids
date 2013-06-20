@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="1.6.0">
+	<name>Polaroids</name>
+	<author>Benjamin Booth</author>
+	<creationDate>June 2011</creationDate>
+	<copyright>Copyright (C) 2011 Benjamin Booth</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>bkbooth@facebook.com</authorEmail>
+	<authorUrl>www.facebook.com/bkbooth</authorUrl>
+	<version>1.0.0</version>
+	<description>MODULE_DESC</description>
+	<files>
+		<filename module="mod_polaroids">mod_polaroids.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>tmpl/default.php</filename>
+		<filename>tmpl/index.html</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="images_folder" type="text" default="images/polaroids" label="MOD_POL_LBL_IMG_FOLDER" description="MOD_POL_DESC_IMG_FOLDER" />
+				<field name="images_number" type="text" default="5" label="MOD_POL_LBL_IMG_NUM" description="MOD_POL_DESC_IMG_NUM" />
+				<field name="images_width" type="text" default="150" label="MOD_POL_LBL_IMG_WIDTH" description="MOD_POL_DESC_IMG_WIDTH" />
+				<field name="images_height" type="text" default="85" label="MOD_POL_LBL_IMG_HEIGHT" description="MOD_POL_DESC_IMG_HEIGHT" />
+				<field name="grayscale" type="radio" default="1" label="MOD_POL_LBL_GRAY" description="MOD_POL_DESC_GRAY">
+					<option value="1">MOD_POL_OPT_YES</option>
+					<option value="0">MOD_POL_OPT_NO</option>
+				</field>
+				<field name="frame_image" type="text" default="polaroid-frame.png" label="MOD_POL_LBL_FRAME_IMG" description="MOD_POL_DESC_FRAME_IMG" />
+				<field name="full_width" type="text" default="170" label="MOD_POL_LBL_FULL_WIDTH" description="MOD_POL_DESC_FULL_WIDTH" />
+				<field name="full_height" type="text" default="105" label="MOD_POL_LBL_FULL_HEIGHT" description="MOD_POL_DESC_FULL_HEIGHT" />
+				<field name="max_rotation" type="text" default="5" label="MOD_POL_LBL_MAX_ROT" description="MOD_POL_DESC_MAX_ROT" />
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" descripimages_foldertion="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field name="cache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field name="cachemode" type="hidden" default="static">
+					<option value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
